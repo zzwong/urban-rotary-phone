@@ -1,0 +1,33 @@
+{
+  "name": "lit",
+  "version": "1.0.0",
+  "description": "A simple messenger bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "no thx",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zzwong/urban-rotary-phone.git"
+  },
+  "keywords": [
+    "messenger",
+    "messenger",
+    "bot",
+    "facebook",
+    "lit",
+    "fam"
+  ],
+  "author": "Aaron Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzwong/urban-rotary-phone/issues"
+  },
+  "homepage": "https://github.com/zzwong/urban-rotary-phone#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  }
+}
