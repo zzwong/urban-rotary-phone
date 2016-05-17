@@ -4,7 +4,12 @@ var bodyParser = require('body-parser');
 var request = require('request');
 
 // Middleware
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+app.get('/privacy', function(req, res){
+  res.sendfile('privacypolicy.htm');
+});
 
 app.get('/ping', function(req, res){
   res.send('pong');
@@ -14,7 +19,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-// Verify token
+// Verifies token
 app.get('/webhook', function (req, res) {
   if (req.query['hub.verify_token'] === 'lit-fam') {
     res.send(req.query['hub.challenge']);
@@ -22,6 +27,7 @@ app.get('/webhook', function (req, res) {
   res.send('Error, wrong validation token');
 })
 
+// Lolz
 var stuffs = ["its lit", "yee", "shiet mang", "lit fam", "freshhh", "swag", "what's good fam"];
 
 // Does stuff
